@@ -1,0 +1,5 @@
+CREATE TABLE "menu"(
+    id INT PRIMARY KEY ,
+    price DOUBLE PRECISION NOT NULL,
+    name VARCHAR
+);
