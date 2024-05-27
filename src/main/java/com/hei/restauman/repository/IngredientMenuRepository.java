@@ -100,23 +100,4 @@ public class IngredientMenuRepository {
         }
     }
 
-    public IngredientMenu getIngredientMenuByMenuName(String menuName) {
-        String sql = """
-                SELECT  quantity, id, price, name FROM ingredient_menu
-                JOIN public.menu m on m.id = ingredient_menu.id_menu
-                JOIN public.ingredient_template it on it.id = ingredient_menu.id_ingredient_template
-                WHERE m.name=?
-                """;
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setString(1, menuName);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return null;
-    }
 }

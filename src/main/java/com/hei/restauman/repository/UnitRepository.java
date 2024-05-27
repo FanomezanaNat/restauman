@@ -1,6 +1,5 @@
 package com.hei.restauman.repository;
 
-import com.hei.restauman.entity.Menu;
 import com.hei.restauman.entity.Unit;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
